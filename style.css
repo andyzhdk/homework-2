@@ -1,0 +1,227 @@
+/** 
+ * A very basic CSS reset:
+ * More about CSS resets: https://meyerweb.com/eric/tools/css/reset/
+ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  all: unset;
+}
+
+/** 
+ * Card sizing and positioning.
+ * Don't mess with this!
+ */
+.card {
+  width: 300px;
+  height: 540px;
+  margin: 40px auto 0 auto;
+}
+
+/** 
+ * Just some styling to make the card visible.
+ * Feel free to change this!
+ */
+
+.card {
+  color: #000;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+@font-face {
+  font-family: pixel;
+  src: url(assets/fonts/Pixelated.ttf);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(116, 116, 116, 0);
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  background-clip: padding-box;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #e00a0a;
+  height: 50px;
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #a30000;
+}
+
+body {
+  font-family: pixel;
+}
+
+#close-popup {
+  position: absolute;
+  bottom: 15px;
+  opacity: 0;
+  z-index: -1;
+  transition: transform 0.1s;
+  transition: opacity 0.6s;
+}
+
+#close-popup:hover {
+  transform: scale(1.04);
+  transition: transform 0.1s;
+  cursor: pointer;
+}
+
+#pokemon-wrapper {
+  height: 380px;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+    inset 0px 0px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+#title-img {
+  width: 100%;
+}
+
+#search {
+  width: 250px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+    inset 0px 0px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  stroke: none;
+  padding: 10px;
+  margin: 8px 0 8px 0;
+}
+
+.pokemon-list {
+  height: 350px;
+  overflow: scroll;
+  overflow-x: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pokemon-card {
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.pokemon-card:hover {
+  transition: transform 0.2s;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.pokemon-name {
+  top: 10px;
+  width: 100%;
+  font-size: 15px;
+}
+
+.pokemon-image {
+  max-width: 70px;
+  max-height: 70px;
+}
+
+.pokemon-tag {
+  bottom: 0px;
+  right: 0px;
+}
+
+.icon {
+  width: 50px;
+}
+
+.pokemon-details {
+  width: 230px;
+  height: 300px;
+  position: absolute;
+  top: -300px;
+  transition: transform 0.6s;
+  z-index: 2;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.detail-image {
+  min-width: 80px;
+  max-height: 100px;
+}
+
+.detail-image-frame {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25),
+    inset 0px 0px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.detail-header-frame {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25),
+    inset 0px 0px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  height: 40px;
+  margin-top: 20px;
+  padding: 2px;
+  text-align: center;
+}
+
+.detail-type {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25),
+    inset 0px 0px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  height: auto;
+  padding: 2px;
+  margin-top: 15px;
+  width: auto;
+  text-align: center;
+}
+
+.slide-in {
+  transform: translateY(300px);
+  transition: transform 0.6s;
+}
+
+.dimmer {
+  background-color: rgba(14, 14, 14, 0.637);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.6s;
+}
+
+.visible {
+  opacity: 1;
+  transition: opacity 0.6s;
+}

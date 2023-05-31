@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokédex</title>
+    <link href="assets/UI/favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.2/color-thief.min.js"></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Keep this div with the class card! -->
+    <div class="card">
+      <div id="title">
+        <img id="title-img" src="assets/UI/title.png" />
+      </div>
+      <div>
+        <input
+          autocomplete="off"
+          id="search"
+          type="text"
+          placeholder="Search..."
+          name="search"
+        />
+      </div>
+      <div id="pokemon-wrapper">
+        <div class="pokemon-details" id="pokemon-details"></div>
+        <div id="close-popup" onclick="closePopup()">
+          <img class="icon" src="assets/UI/undo.png" />
+        </div>
+        <div class="dimmer" id="dimmer"></div>
+        <!-- Basic logic taken from class (pizza example) -->
+        <ul class="pokemon-list" data-js="pokemon-wrapper"></ul>
+      </div>
+    </div>
+  </body>
+</html>
